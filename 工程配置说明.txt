@@ -1,0 +1,51 @@
+
+工程配置说明:
+
+实验平台：Windows 10操作系统
+
+keras，现在使用tensorflow里的keras替代
+
+钱晨阳程序里 import keras统统改成 from tensorflow import keras
+
+数据应该有了，qcy_dataset_1000.zip
+
+开发环境：Spyder
+
+第三方开源库: MNE 、 Matplotlib 、SciPy 、 sklearn 、StatsModels 、 tensorflow-gpu 、TensorFlow-keras
+
+数据集: TUH EEG Seizure Corpus
+ v1.0.4(现已更新至 v1.2.1)  下载网址: https://www.isip.piconepress.com/projects/tuh_eeg/html/downloads.shtml
+
+
+程序及运行结果中包含4个文件夹以及8个.py文件：
+
+程序代码:(若代码中使用了相对路径，则需要将代码与数据集放置在同一根目录下；可以将相对路径修改为绝对路径)
+
+DataPreprocess.py:对原始数据集进行预处理，将其与v1.0.4文件夹放置在同一根目录下
+
+ACF_Analysis.py:绘制训练数据集和评估数据集中样本的相关长度分布情况
+
+Resample.py:对截取到的原始数据片段进行重采样
+
+Resample_Scale_Plot.py：重采样与归一化实验
+
+TUH-Conv1d+GRU.py:  Conv1D+GRU模型
+
+TUH-Conv2D+GRU.py： Conv2D+GRU模型
+
+TUH-Conv2D(Concat)+GRU.py： Conv2D(Concat)+GRU模型
+
+TUH-Conv2D(Concat)+Permute+GRU.py： TUH-Conv2D(Concat)+Permute+GRU.py模型
+
+
+
+
+文件夹:
+
+Accfig:所有实验的准确率变化曲线图以及混淆矩阵
+
+Lossfig：所有实验的损失函数变化曲线图
+
+Analysis for ACF:训练数据集和评估数据集中样本的相关长度分布情况
+
+Resample_Scale_Plot:信号重采样与归一化实验结果
